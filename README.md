@@ -9,6 +9,8 @@
 One executable. No framework, no runtime, no installer. Drag the bloom onto an AI
 chat and it types the note in for you.
 
+**Windows 10 and 11, 64-bit.**
+
 **Download:** the standalone `PocketPetal.exe` on the [releases page](../../releases)
 — no installer, no runtime, nothing beside it. The filename never carries a version,
 so a shortcut you've pinned survives an update; the version is the release's own tag
@@ -95,7 +97,7 @@ whatever you launched it from cannot take it down with it.
 
 ## Build
 
-Needs Go 1.27 or newer (the version `go.mod` asks for). Nothing else.
+Needs Go 1.27.2 or newer (the version `go.mod` asks for: earlier 1.27 releases have known standard-library vulnerabilities). Nothing else.
 
 ```sh
 tools/build-release.sh          # checks, then dist/PocketPetal.exe

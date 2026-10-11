@@ -36,7 +36,7 @@ import (
 var (
 	Name    = "Pocket Petal"
 	Slug    = "pocket-petal"
-	Version = "0.1.0"
+	Version = "0.1.1"
 )
 
 // Config is how the flower window is set up, and everything the tray menu can
