@@ -33,7 +33,7 @@ import (
 // version is what this build calls itself. A plain `go build` gets the source's own
 // number; the release build stamps it (-X main.version=…) so that the exe in a
 // release is never guessed at from its file date.
-var version = "0.1.1"
+var version = "0.1.0"
 
 func main() {
 	// the app names itself once (see internal/buddy), and this run is the one that
