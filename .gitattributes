@@ -1,0 +1,23 @@
+# Line endings, said once, so that the bytes a release is built from do not depend on
+# whose machine is building it.
+#
+# This is not tidiness, it is a release that was failing: `tools/build-release.sh`
+# refuses to build when `gofmt -l` names a file, and on a Windows runner a checkout with
+# the usual `core.autocrlf=true` gives every .go file a carriage return on the end of
+# every line — which gofmt rewrites to LF and therefore reports as unformatted. The whole
+# tree was named, and the release stopped, over a line ending nobody wrote.
+#
+# So text is text, and it is checked out as LF everywhere: Go's own formatting is the only
+# formatting this project has, and it wants LF.
+* text=auto eol=lf
+
+# And things that are not text at all, so that nothing tries to normalise them: the
+# flower's icon, the pictures of it, the chimes it plays, and the two files that are
+# build output rather than source (the linker's object and the exe) are all ignored by
+# git, but a rule here is cheaper than an explanation later.
+*.ico binary
+*.png binary
+*.mp3 binary
+*.wav binary
+*.exe binary
+*.syso binary
